@@ -3,8 +3,8 @@ import granViaje.Estados.*;
 import granViaje.Componentes.*;
 public class Auto {
 	Estado estado;
-	Combustible combustible;
-	Motor motor;
+	final Combustible combustible;
+	final Motor motor;
 	double velocidad;
 	public Auto(Estado estado, Combustible combustible, Motor motor) {
 		this.estado = estado;
