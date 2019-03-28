@@ -11,15 +11,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Funcionalidad {
-
+	Auto auto;
 
 	@BeforeEach
 	void setUp() throws Exception {
-		}
+		this.auto = new Auto(Apagado.get(),new Combustible(1000,1000),new Motor(0));
+		
+	}
 
 	@Test
 	void elAutoApagadoNoAcelera() {
-		Auto auto = new Auto(Apagado.get(),new Combustible(1000,1000),new Motor(0));
 		assertThrows(AutoApagadoExcepcion.class,()->{auto.acelerar(2);});
 	}
 
